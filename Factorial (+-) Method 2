@@ -1,0 +1,55 @@
+#include<stdio.h>
+int main()
+{
+	int x=0;
+	printf("\nEnter the value of x\t:\t");
+	scanf("%d",&x);
+
+	int n=0;
+	printf("\nEnter the value of n\t:\t");
+	scanf("%d",&n);
+
+	int f=1;
+	int a=2;
+
+    float y=0;
+    float z=1;
+
+	if (n%2==1)
+
+	{
+
+
+		for (int i=1; i <=n; i=i+2)
+		{
+			f=1;
+			z=1;
+
+			for (int k=i; k>=1; k--)
+			{
+
+				f=f*k;
+			}
+
+			for(int j=0;j<i;j++)
+			{z= z*x;}
+			if (a%2==0)
+			{
+				y=y+(z/f);
+				a++;
+			}
+			else if (a%2==1)
+			{
+				y = y-(z/f);
+				a++;
+			}
+
+		}
+
+		printf("y\t=\t%f\n\n\n\n",y);
+	}
+
+	else
+	printf("\nPlease enter an odd value");
+	return 0;
+}
