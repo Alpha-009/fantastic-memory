@@ -1,0 +1,75 @@
+#include<stdio.h>
+
+int main()
+
+{
+
+int x = 0, n = 0, fac = 1, s = 2;
+
+float y=0,v=1 ;
+
+printf("please input 'x' value");
+
+scanf("%d",&x);
+
+printf("\nplease input 'n' value");
+
+scanf("%d",&n);
+
+if (n%2==1)
+
+{
+
+for (int i = 1; i <= n; i = i + 2)
+
+{
+
+for (int q = i; q >= 1; q--)
+
+{
+
+fac = fac * q;
+
+}
+
+for(int j=0;j<i;j++)
+
+{v= v*x;}
+
+if (s % 2 == 0)
+
+{
+
+y = y + (v/ fac);
+
+s++;
+
+}
+
+else if (s %2==1)
+
+{
+
+y = y - (v / fac);
+
+s++;
+
+}
+
+fac = 1;
+
+v=1;
+
+}
+
+printf("y= %f ",y);
+
+}
+
+else
+
+printf("\nplease input an odd number");
+
+return 0;
+
+}
